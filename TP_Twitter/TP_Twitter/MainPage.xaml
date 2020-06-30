@@ -26,9 +26,19 @@
                 <!--TweetBox1-->
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <!-- Tweet1 Content -->
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="10">
-                        <Label Text="Justine - @JustineTweet"/>
-                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis." TextColor="Black"></Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                        <!--Tweet Author 2-->
+                        <!--Photo-->
+                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                        <!--author details-->
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Justine"/>
+                                <Label Text="@JustineTweet"/>
+                                <Label Text="40s" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis." TextColor="Black"></Label>
+                        </StackLayout>
                     </StackLayout>
                     <!-- Tweet1 Options -->
                     <StackLayout Orientation="Horizontal">
@@ -36,15 +46,25 @@
                         <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
                         <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
                     </StackLayout>
-                    <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
+                    <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
                 </StackLayout>
                 
-                    <!--TweetBox2-->
+                <!--TweetBox 2-->
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <!-- Tweet2 Content -->
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="10">
-                        <Label Text="Justine - @JustineTweet"></Label>
-                        <Label Text="Quantum est possesam futile. Et non sit scacem convintur putris" TextColor="Black"></Label>
+                    <!-- Tweet1 Content -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                        <!--Tweet Author2-->
+                        <!--Photo-->
+                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                        <!--author details-->
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Justine"/>
+                                <Label Text="@JustineTweet"/>
+                                <Label Text="3s" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <Label Text="Quantum est possesam futile. Et non sit scacem convintur putris" TextColor="Black"></Label>
+                        </StackLayout>
                     </StackLayout>
                     <!-- Tweet2 Options -->
                     <StackLayout Orientation="Horizontal">
@@ -52,9 +72,36 @@
                         <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue" ></Label>
                         <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
                     </StackLayout>
-                        <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
+                        <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
 
                  </StackLayout>
+
+                <!--TweetBox 3-->
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <!-- Tweet1 Content -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                        <!--Tweet Author3-->
+                        <!--Photo-->
+                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                        <!--author details-->
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Justine"/>
+                                <Label Text="@JustineTweet"/>
+                                <Label Text="1s" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                            <Label Text="Potum nopcem ostipulum. Et facto des retum pertutum." TextColor="Black"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- Tweet3 Options -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Répondre" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"  Padding="5" BackgroundColor="LightBlue"></Label>
+                        <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue" ></Label>
+                        <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                    </StackLayout>
+                    <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
+
+                </StackLayout>
             </StackLayout>
         </ScrollView>
 
