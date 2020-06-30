@@ -5,25 +5,71 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TP_Twitter.MainPage">
-
+    <!--Main Stacklayout-->
     <StackLayout Orientation="Vertical">
-        <!-- ContentView ???!= graphical element to export later-->
+
+        <!-- TitleBar. ContentView ???!= graphical element to export later-->
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal" Margin="10,25">
-            <Label Text="Nouveau" HorizontalOptions="Start"></Label>
-            <Label Text="Accueil" HorizontalOptions="CenterAndExpand"></Label>
-            <Label Text="Rechercher" HorizontalOptions="End"></Label>
+                <Label Text="Nouveau" HorizontalOptions="Start"></Label>
+                <Label Text="Accueil" HorizontalOptions="CenterAndExpand"></Label>
+                <Label Text="Rechercher" HorizontalOptions="End"></Label>
             </StackLayout>
         </ContentView>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!"
-        HorizontalOptions="Center"
-        VerticalOptions="CenterAndExpand"
-        TextColor="Black"/>
+
         <!-- Scrollview-->
-        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></ScrollView>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            
+            <!-- TweetList-->
+            <StackLayout Orientation="Vertical">
+                
+                <!--TweetBox1-->
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <!-- Tweet1 Content -->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="10">
+                        <Label Text="Justine - @JustineTweet"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis." TextColor="Black"></Label>
+                    </StackLayout>
+                    <!-- Tweet1 Options -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Répondre" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                        <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                        <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                    </StackLayout>
+                    <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
+                </StackLayout>
+                
+                    <!--TweetBox2-->
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <!-- Tweet2 Content -->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="10">
+                        <Label Text="Justine - @JustineTweet"></Label>
+                        <Label Text="Quantum est possesam futile. Et non sit scacem convintur putris" TextColor="Black"></Label>
+                    </StackLayout>
+                    <!-- Tweet2 Options -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Répondre" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"  Padding="5" BackgroundColor="LightBlue"></Label>
+                        <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue" ></Label>
+                        <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                    </StackLayout>
+                        <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
+
+                 </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+   
+
+        <!-- Footer Bar-->
+        <ContentView BackgroundColor="LightGray">
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label Text="Fil" HorizontalOptions="FillAndExpand"></Label>
+                <Label Text="Notifications" HorizontalOptions="FillAndExpand"></Label>
+                <Label Text="Messages" HorizontalOptions="FillAndExpand"></Label>
+                <Label Text="Moi" HorizontalOptions="FillAndExpand"></Label>
+            </StackLayout>
+        </ContentView>
 
     </StackLayout>
-    
     
 </ContentPage>
