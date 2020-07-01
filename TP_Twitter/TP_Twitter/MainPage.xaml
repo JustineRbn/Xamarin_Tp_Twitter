@@ -30,7 +30,7 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
                         <!--Tweet Author 2-->
                         <!--Photo-->
-                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                        <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
                         <!--author details-->
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                             <StackLayout Orientation="Horizontal">
@@ -56,7 +56,7 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
                         <!--Tweet Author2-->
                         <!--Photo-->
-                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                        <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
                         <!--author details-->
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                             <StackLayout Orientation="Horizontal">
@@ -83,7 +83,7 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
                         <!--Tweet Author3-->
                         <!--Photo-->
-                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                        <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
                         <!--author details-->
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                             <StackLayout Orientation="Horizontal">
