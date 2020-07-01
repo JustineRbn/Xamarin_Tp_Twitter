@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:TP_Twitter"
              mc:Ignorable="d"
              x:Class="TP_Twitter.MainPage">
     <!--Main Stacklayout-->
@@ -11,9 +12,9 @@
         <!-- TitleBar. ContentView ???!= graphical element to export later-->
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal" Margin="10,25">
-                <Label Text="Nouveau" HorizontalOptions="Start" TextColor="White"></Label>
+                <ImageButton Source="{local:ImageRessource TP_Twitter.images.pencil.png}" BackgroundColor="Transparent" WidthRequest="25"></ImageButton>
                 <Label Text="Accueil" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" TextColor="White"></Label>
-                <Label Text="Rechercher" HorizontalOptions="End" TextColor="White"></Label>
+                <ImageButton Source="{local:ImageRessource TP_Twitter.images.search.png}" BackgroundColor="Transparent" WidthRequest="25"></ImageButton>
             </StackLayout>
         </ContentView>
 
