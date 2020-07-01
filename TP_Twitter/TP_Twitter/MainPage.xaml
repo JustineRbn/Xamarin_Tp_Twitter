@@ -11,9 +11,9 @@
         <!-- TitleBar. ContentView ???!= graphical element to export later-->
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal" Margin="10,25">
-                <Label Text="Nouveau" HorizontalOptions="Start"></Label>
-                <Label Text="Accueil" HorizontalOptions="CenterAndExpand"></Label>
-                <Label Text="Rechercher" HorizontalOptions="End"></Label>
+                <Label Text="Nouveau" HorizontalOptions="Start" TextColor="White"></Label>
+                <Label Text="Accueil" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" TextColor="White"></Label>
+                <Label Text="Rechercher" HorizontalOptions="End" TextColor="White"></Label>
             </StackLayout>
         </ContentView>
 
