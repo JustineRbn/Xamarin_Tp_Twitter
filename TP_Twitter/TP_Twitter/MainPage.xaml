@@ -17,7 +17,17 @@
                 <ImageButton Source="{local:ImageRessource TP_Twitter.images.search.png}" BackgroundColor="Transparent" WidthRequest="25"></ImageButton>
             </StackLayout>
         </ContentView>
-
+        <!-- Form Connexion-->
+        <StackLayout Orientation="Vertical">
+            <Entry Placeholder="Nom utilisateur" PlaceholderColor="LightBlue" MaxLength="100" Keyboard="Telephone" ReturnType="Next"></Entry>
+            <Entry Placeholder="Mot de passe" PlaceholderColor="LightBlue" MaxLength="12" Keyboard="Telephone" ReturnType="Next" IsPassword="True"></Entry>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Switch IsToggled="False" ThumbColor="LightBlue"></Switch>
+                <Label Text="Se souvenir de moi"></Label>
+            </StackLayout>
+        </StackLayout>
+        
+           
         <!-- Scrollview-->
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             
