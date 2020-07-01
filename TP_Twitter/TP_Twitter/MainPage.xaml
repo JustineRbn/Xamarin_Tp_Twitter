@@ -17,107 +17,108 @@
                 <ImageButton Source="{local:ImageRessource TP_Twitter.images.search.png}" BackgroundColor="Transparent" WidthRequest="25"></ImageButton>
             </StackLayout>
         </ContentView>
+        
         <!-- Form Connexion-->
-        <StackLayout Orientation="Vertical">
-            <Entry Placeholder="Nom utilisateur" PlaceholderColor="LightBlue" MaxLength="100" Keyboard="Telephone" ReturnType="Next"></Entry>
-            <Entry Placeholder="Mot de passe" PlaceholderColor="LightBlue" MaxLength="12" Keyboard="Telephone" ReturnType="Next" IsPassword="True"></Entry>
+        <StackLayout x:Name="ConnexionForm" Orientation="Vertical">
+            <Entry x:Name="username" Placeholder="Nom utilisateur" PlaceholderColor="LightBlue" MaxLength="10" Keyboard="Default" ReturnType="Next"></Entry>
+            <Entry x:Name="pwd" Placeholder="Mot de passe" PlaceholderColor="LightBlue" MaxLength="10" Keyboard="Default" ReturnType="Next" IsPassword="True"></Entry>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Switch IsToggled="False" ThumbColor="LightBlue"></Switch>
+                <Switch x:Name="rememberme" IsToggled="False" ThumbColor="LightBlue"></Switch>
                 <Label Text="Se souvenir de moi"></Label>
             </StackLayout>
+            <Label x:Name="error" Text="Identifiants invalides. Veuillez ressaisir" TextColor="DarkRed" IsVisible="False"></Label>
+            <Button Text="Connexion" BackgroundColor="AliceBlue" Clicked="Button_Clicked"></Button>
         </StackLayout>
+
         
-           
-        <!-- Scrollview-->
-        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            
-            <!-- TweetList-->
-            <StackLayout Orientation="Vertical">
-                
-                <!--TweetBox1-->
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <!-- Tweet1 Content -->
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
-                        <!--Tweet Author 2-->
-                        <!--Photo-->
-                        <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
-                        <!--author details-->
-                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Justine"/>
-                                <Label Text="@JustineTweet"/>
-                                <Label Text="40s" HorizontalOptions="EndAndExpand"/>
+            <!-- Scrollview-->
+            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <!-- TweetList-->
+            <StackLayout x:Name="TweetList" Orientation="Vertical" IsVisible="False">
+
+                    <!--TweetBox1-->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <!-- Tweet1 Content -->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                            <!--Tweet Author 2-->
+                            <!--Photo-->
+                            <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
+                            <!--author details-->
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Justine"/>
+                                    <Label Text="@JustineTweet"/>
+                                    <Label Text="40s" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis." TextColor="Black"></Label>
                             </StackLayout>
-                            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis." TextColor="Black"></Label>
                         </StackLayout>
+                        <!-- Tweet1 Options -->
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        </StackLayout>
+                        <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
                     </StackLayout>
-                    <!-- Tweet1 Options -->
-                    <StackLayout Orientation="Horizontal">
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                    </StackLayout>
-                    <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
-                </StackLayout>
-                
-                <!--TweetBox 2-->
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <!-- Tweet1 Content -->
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
-                        <!--Tweet Author2-->
-                        <!--Photo-->
-                        <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
-                        <!--author details-->
-                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Justine"/>
-                                <Label Text="@JustineTweet"/>
-                                <Label Text="3s" HorizontalOptions="EndAndExpand"/>
+
+                    <!--TweetBox 2-->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <!-- Tweet1 Content -->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                            <!--Tweet Author2-->
+                            <!--Photo-->
+                            <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
+                            <!--author details-->
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Justine"/>
+                                    <Label Text="@JustineTweet"/>
+                                    <Label Text="3s" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <Label Text="Quantum est possesam futile. Et non sit scacem convintur putris" TextColor="Black"></Label>
                             </StackLayout>
-                            <Label Text="Quantum est possesam futile. Et non sit scacem convintur putris" TextColor="Black"></Label>
                         </StackLayout>
-                    </StackLayout>
-                    <!-- Tweet2 Options -->
-                    <StackLayout Orientation="Horizontal">
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                    </StackLayout>
+                        <!-- Tweet2 Options -->
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        </StackLayout>
                         <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
 
-                 </StackLayout>
+                    </StackLayout>
 
-                <!--TweetBox 3-->
-                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <!-- Tweet1 Content -->
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
-                        <!--Tweet Author3-->
-                        <!--Photo-->
-                        <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
-                        <!--author details-->
-                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Justine"/>
-                                <Label Text="@JustineTweet"/>
-                                <Label Text="1s" HorizontalOptions="EndAndExpand"/>
+                    <!--TweetBox 3-->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <!-- Tweet1 Content -->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                            <!--Tweet Author3-->
+                            <!--Photo-->
+                            <Image Source="https://picsum.photos/50/50/?random)" WidthRequest="50"></Image>
+                            <!--author details-->
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Justine"/>
+                                    <Label Text="@JustineTweet"/>
+                                    <Label Text="1s" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <Label Text="Potum nopcem ostipulum. Et facto des retum pertutum." TextColor="Black"></Label>
                             </StackLayout>
-                            <Label Text="Potum nopcem ostipulum. Et facto des retum pertutum." TextColor="Black"></Label>
                         </StackLayout>
-                    </StackLayout>
-                    <!-- Tweet3 Options -->
-                    <StackLayout Orientation="Horizontal">
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
-                    </StackLayout>
-                    <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
+                        <!-- Tweet3 Options -->
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                            <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        </StackLayout>
+                        <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
 
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
-        </ScrollView>
-
-   
-
+            </ScrollView>
+            
         <!-- Footer Bar-->
         <ContentView BackgroundColor="LightGray">
             <StackLayout Orientation="Horizontal" Margin="10">
