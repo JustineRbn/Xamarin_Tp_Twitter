@@ -43,9 +43,9 @@
                     </StackLayout>
                     <!-- Tweet1 Options -->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Répondre" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
-                        <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
-                        <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
                     </StackLayout>
                     <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
                 </StackLayout>
@@ -69,9 +69,9 @@
                     </StackLayout>
                     <!-- Tweet2 Options -->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Répondre" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"  Padding="5" BackgroundColor="LightBlue"></Label>
-                        <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue" ></Label>
-                        <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
                     </StackLayout>
                         <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
 
@@ -96,9 +96,9 @@
                     </StackLayout>
                     <!-- Tweet3 Options -->
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Répondre" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"  Padding="5" BackgroundColor="LightBlue"></Label>
-                        <Label Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue" ></Label>
-                        <Label Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Padding="5" BackgroundColor="LightBlue"></Label>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.reply.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.retweet.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
+                        <ImageButton Source="{local:ImageRessource TP_Twitter.images.favorite.png}" BackgroundColor="Transparent" WidthRequest="25" HorizontalOptions="FillAndExpand"></ImageButton>
                     </StackLayout>
                     <ContentView HeightRequest="1" BackgroundColor="AliceBlue" HorizontalOptions="FillAndExpand"></ContentView>
 
