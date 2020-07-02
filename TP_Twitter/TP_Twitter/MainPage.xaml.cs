@@ -27,13 +27,13 @@ namespace TP_Twitter
             String pwdStr = this.pwd.Text;
             Boolean isRemember = this.rememberme.IsToggled;
 
-            if(usernameStr == null || string.IsNullOrEmpty(usernameStr) || usernameStr.Length < 3)
+            if(string.IsNullOrEmpty(usernameStr) || usernameStr.Length < 3)
             {
                 this.DisplayError("Identifiant invalide. 3 caractères minimum");
                 return;
             }
 
-            if (pwdStr == null || string.IsNullOrEmpty(pwdStr) || pwdStr.Length < 5)
+            if (string.IsNullOrEmpty(pwdStr) || pwdStr.Length < 5)
             {
                 this.DisplayError("Mot de passe invalide. Entre 5 et 10 caractères minimum");
                 return;
