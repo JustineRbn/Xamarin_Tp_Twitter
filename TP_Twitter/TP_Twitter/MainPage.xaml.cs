@@ -5,7 +5,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using TP_Twitter.services;
 using Xamarin.Forms;
+
 
 namespace TP_Twitter
 {
@@ -14,6 +16,8 @@ namespace TP_Twitter
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        private ITwitterService twitterService = new TwitterService();
+
         public MainPage()
         {
             InitializeComponent();
@@ -45,7 +49,19 @@ namespace TP_Twitter
 
             this.ConnexionForm.IsVisible = false;
             this.TweetList.IsVisible = true;
+            if (this.twitterService.authenticate(usernameStr, pwdStr))
+            {
+                this.ConnexionForm.IsVisible = false;
+                this.TweetList.IsVisible = true;
+            } else
+            {
+                this.error.Text="Identifiants incorrects";
+                this.error.IsVisible = true;
+
+            }
+
         }
+
         private void HideError() 
         {
             this.error.IsVisible = false;
