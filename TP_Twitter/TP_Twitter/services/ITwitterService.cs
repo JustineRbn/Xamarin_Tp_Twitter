@@ -7,9 +7,9 @@ namespace TP_Twitter.services
 {
     public interface ITwitterService
     {
-        bool authenticate(string key, string secret);
+        bool Authenticate(string key, string secret);
 
-        List<Tweet> getTweets();
+        List<Tweet> GetTweets(String tagword);
         
     }
 }

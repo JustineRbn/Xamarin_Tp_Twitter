@@ -47,7 +47,7 @@ namespace TP_Twitter
                 DisplayAlert("Information", "Vos informations de connexion seront enregistrées localement", "Ok");
             }
 
-            if (this.twitterService.authenticate(usernameStr, pwdStr))
+            if (this.twitterService.Authenticate(usernameStr, pwdStr))
             {
                 this.ConnexionForm.IsVisible = false;
                 this.TweetList.IsVisible = true;
