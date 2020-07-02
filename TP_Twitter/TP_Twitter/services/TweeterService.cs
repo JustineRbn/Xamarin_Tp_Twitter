@@ -4,16 +4,18 @@ using System.Text;
 using TP_Twitter.models;
 using TP_Twitter.services;
 
-namespace TP_Twitter
+namespace TP_Twitter.services
 {
     class TwitterService : ITwitterService
     {
         public bool authenticate(string username, string pwd)
         {
-            if(string.IsNullOrEmpty(username) && string.IsNullOrEmpty(pwd)){
+            if (username.Equals("justine") && pwd.Equals("pouet"))
+            {
                 return true;
             }
-            return false;
+
+            return false;    
         }
 
         public List<Tweet> getTweets()
